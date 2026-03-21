@@ -13,6 +13,8 @@ from dotenv import load_dotenv
 
 load_dotenv() #call load_dotenv() to read .env file at startup
 
+print("API KEY LOADED:", os.getenv("ANTHROPIC_API_KEY"))
+
 app = FastAPI() #create FastAPI app(main object that handles all routes)
 
 # Create the Anthropic client using our API key from the .env file
