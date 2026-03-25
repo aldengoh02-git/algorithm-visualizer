@@ -32,7 +32,9 @@ export default function Tutor({ algorithm, step, currentStepIndex, totalSteps })
 
     try {
       // POST to our Python backend with all the context Claude needs
-      const { data } = await axios.post(`${import.meta.env.VITE_API_URL || ''}/api/tutor`, {
+      const { data } = await axios.post(
+        'https://algorithm-visualizer-production-fa26.up.railway.app/api/tutor',
+    {
         algorithm,                    // e.g. "Bubble Sort"
         step: currentStepIndex + 1,   // 1-indexed for readability
         total_steps: totalSteps,      // total number of steps

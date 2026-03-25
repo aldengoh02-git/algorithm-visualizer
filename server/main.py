@@ -28,7 +28,10 @@ client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 # allow_headers=["*"] means accept any headers the browser sends
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "https://algorithm-visualizer-lake-seven.vercel.app"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://algorithm-visualizer-lake-seven.vercel.app"
+        ],
     allow_methods=["*"],
     allow_headers=["*"]
 )
